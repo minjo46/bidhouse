@@ -13,7 +13,7 @@ resource "azurerm_mysql_flexible_server" "mysql" {
   delegated_subnet_id    = azurerm_subnet.mysql_subnet.id      # 전용 서브넷 필요
   private_dns_zone_id    = azurerm_private_dns_zone.mysql.id 
   version                = "8.0.21"
-  sku_name               = "B_Standard_B1ms"
+  sku_name               = "GP_Standard_D2ds_v4"
   zone                   = "1"
 
   depends_on = [
